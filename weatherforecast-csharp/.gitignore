@@ -7,3 +7,9 @@ obj/
 
 # JetBrains Rider
 /.idea
+
+### VS Code ###
+.vscode/
+
+### Credentials ###
+state
