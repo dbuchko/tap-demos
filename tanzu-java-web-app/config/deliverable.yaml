@@ -1,0 +1,31 @@
+apiVersion: carto.run/v1alpha1
+kind: Deliverable
+metadata:
+  creationTimestamp: "2022-10-28T21:51:55Z"
+  generation: 1
+  labels:
+    app.kubernetes.io/component: deliverable
+    app.kubernetes.io/part-of: tanzu-java-web-app
+    app.tanzu.vmware.com/deliverable-type: web
+    apps.tanzu.vmware.com/has-tests: "true"
+    apps.tanzu.vmware.com/workload-type: web
+    carto.run/cluster-template-name: deliverable-template
+    carto.run/resource-name: deliverable
+    carto.run/supply-chain-name: source-test-scan-to-url
+    carto.run/template-kind: ClusterTemplate
+    carto.run/workload-name: tanzu-java-web-app
+    carto.run/workload-namespace: dev
+  name: tanzu-java-web-app
+  namespace: default
+  resourceVersion: "14489786"
+  uid: 5466fe2b-cf79-4f14-951d-df7ebf260e27
+spec:
+  params:
+  - name: gitops_ssh_secret
+    value: git-ssh
+  source:
+    git:
+      ref:
+        branch: main
+      url: https://github.com/dbuchko/tap-run-gitops.git
+    subPath: config/dev/tanzu-java-web-app

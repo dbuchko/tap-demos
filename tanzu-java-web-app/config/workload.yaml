@@ -17,3 +17,22 @@ spec:
       ref:
         branch: main
     subPath: tanzu-java-web-app
+
+# kubectl apply -f ../../config/test-pipeline.yaml -n dev
+
+# tanzu apps workload list -n dev
+# tanzu apps workload create -f ../../config/workload.yaml -n dev
+# tanzu apps workload update -f ../../config/workload.yaml -n dev
+# tanzu apps workload get tanzu-java-web-app -n dev
+# tanzu apps workload tail tanzu-java-web-app -n dev --since 1h
+# tanzu apps workload delete tanzu-java-web-app -n dev
+
+# kubectl tree workload tanzu-java-web-app -n dev
+
+# kubectl get deliverable -A 
+# kubectl get deliverable tanzu-java-web-app -n dev
+# kubectl get deliverable tanzu-java-web-app -o YAML -n dev >../../tanzu-java-web-app/config/deliverable.yaml
+# kubectl apply -f ../../tanzu-java-web-app/config/deliverable.yaml
+# kubectl get deliverables -A 
+# kubectl tree deliverable tanzu-java-web-app -n default
+# kubectl delete deliverable tanzu-java-web-app -n default
