@@ -17,8 +17,8 @@ spec:
 # kubectl apply -f ../../config/test-pipeline.yaml -n dev
 
 # tanzu apps workload list -n dev
-# tanzu apps workload create -f ../../config/workload.yaml -n dev
-# tanzu apps workload update -f ../../config/workload.yaml -n dev
+# tanzu apps workload create -f ../../weatherforecast-csharp/config/workload.yaml -n dev
+# tanzu apps workload update -f ../../weatherforecast-csharp/config/workload.yaml -n dev
 # tanzu apps workload get weatherforecast-csharp -n dev
 # tanzu apps workload tail weatherforecast-csharp -n dev --since 1h
 # tanzu apps workload delete weatherforecast-csharp -n dev
@@ -27,8 +27,8 @@ spec:
 
 # kubectl get deliverable -A 
 # kubectl get deliverable weatherforecast-csharp -n dev
-# kubectl get deliverable weatherforecast-csharp -o YAML -n dev >../run-primary/deliverable.yaml
-# kubectl apply -f deliverable.yaml
+# kubectl get deliverable weatherforecast-csharp -o YAML -n dev >../../weatherforecast-csharp/config/deliverable.yaml
+# kubectl apply -f ../../weatherforecast-csharp/config/deliverable.yaml
 # kubectl get deliverables -A 
 # kubectl tree deliverable weatherforecast-csharp -n default
 # kubectl delete deliverable weatherforecast-csharp -n default
